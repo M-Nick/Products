@@ -53,7 +53,7 @@
             <a-select-option
               v-for="(cur, index) in getCurrencies"
               :key="index"
-              value="cur"
+              :value="cur"
             >
               {{ cur }}
             </a-select-option>
@@ -142,6 +142,8 @@ export default {
             "products/addProduct",
             Object.assign({}, this.form)
           );
+          this.$refs.ruleForm.resetFields();
+          this.handleBack();
         }
       });
     },

@@ -16,7 +16,11 @@
               >Calculate</a-button
             >
             <div class="total">
-              <p v-for="(price, index) in getTotalPrice" :key="index">
+              <p
+                v-for="(price, index) in getTotalPrice"
+                :key="index"
+                class="total-price"
+              >
                 {{ `${price.currency} ${price.price}` }}
               </p>
             </div>
@@ -147,5 +151,8 @@ export default {
 }
 .button-add {
   margin-bottom: 8px;
+}
+.total-price {
+  text-align: center;
 }
 </style>
